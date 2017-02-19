@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=600, initial-scale=0.55">
+  <title>QuakeBox</title>
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.js"></script>
+  <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/datepicker/css/datepicker.css" rel="stylesheet">
+  <script src="assets/datepicker/js/bootstrap-datepicker.js"></script>
+  <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+  <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+  <link href="assets/css/app.css" rel="stylesheet">
+
+</head>
+<body><div class="huge-wrap">
+
+  <div class="scroll-top-btn">
+    TOP
+  </div>
+  <div class="search-sidebar">
+  <div class="title-bar">
+  <div class="tint">
+    <div class="logo">
+      <a class="profile" href="https://github.com/thisisdevs" target="_blank">
+        <img src="assets/images/profile.png">
+      </a>
+      <h2>
+        QuakeBox
+      </h2>
+    </div>
+  </div>
+  </div>
+
+  <div class="search-form">
+    <form>
+    <label for="hid">Start Date</label>
+    <input type="hidden" id="hid" value="">
+    <div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+        <input class="form-control" size="16" type="text" value="" readonly id="startdate">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="hid2">End Date</label>
+    <input type="hidden" id="hid2" value="">
+    <div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+        <input class="form-control" size="16" type="text" value="" readonly id="enddate">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+    </div>
+    <label for="minmag">Minimum Magnitude</label>
+    <input type="text" id="minmag" class="form-control" value="0">
+    <span id="error" style="color:white;"></span>
+    <button type="submit" id="search-btn">Search</button>
+    </form>
+
+  </div>
+
+  <a class="footer" href="https://github.com/thisisdevs">
+    <p><img src="assets/images/Github_logo_white.png"> /thisisdevs</p>
+  </a>
+</div>
+
+  <div class="main-wrap">
+
+  <div class="loader">
+  </div>
+  <div class="frame-wrap">
+    <form id="search-bar">
+      <input type="text" id="place-search-query" placeholder="type name of a place to search"/>
+      <button type="button" id="place-search-button">Search</button>
+    </form>
+    <span class="tag"></span>
+    <div id="navigator">
+      <button id="previous-page">Previous</button>
+      <button id="next-page">Next</button>
+    </div>
+
+  </div>
+</div>
+
+</div>
+  <script src="assets/js/driving-functions.js"></script>
+  <script src="assets/js/ui-func.js"></script>
+</body>
+</html>

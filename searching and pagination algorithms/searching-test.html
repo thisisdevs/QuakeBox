@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Searching</title>
+    <script src="searching.js"></script>
+  </head>
+  <body>
+    <input type="text" id="search-query"/>
+    <button type="button" name="button" id="search">Search</button>
+    <div class="frame"></div>
+    <script type="text/javascript">
+
+      document.querySelector('button').addEventListener('click',function(evt){
+        evt.preventDefault();
+        var currentUrl = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02";
+        var squery = document.querySelector('input').value;
+        var reVal = RegExp(squery,'i');
+        searchAndShow(reVal,currentUrl);
+      });
+    </script>
+  </body>
+</html>

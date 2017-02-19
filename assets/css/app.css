@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px  0px 3px black;
+  display: none;
+  z-index: 100; }
+  .scroll-top-btn.gone {
+    display: block; }
+
+.search-sidebar {
+  width: 400px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #dddddd;
+  box-shadow: 2px 2px 10px black; }
+  .search-sidebar .title-bar {
+    background-image: url(../images/cracked_earth.jpg); }
+    .search-sidebar .title-bar .tint {
+      width: 100%;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.7);
+      position: relative; }
+      .search-sidebar .title-bar .tint .logo {
+        width: 280px;
+        height: 100px;
+        border: 1px solid white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        border-radius: 13px;
+        overflow: hidden; }
+        .search-sidebar .title-bar .tint .logo .profile {
+          width: 100px;
+          height: 100px;
+          border-right: 1px solid white;
+          position: relative; }
+          .search-sidebar .title-bar .tint .logo .profile img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+          .search-sidebar .title-bar .tint .logo .profile:hover {
+            background-color: rgba(255, 255, 255, 0.3); }
+        .search-sidebar .title-bar .tint .logo h2 {
+          color: white;
+          text-align: center;
+          line-height: 100px;
+          flex-grow: 1;
+          margin: 0; }
+  .search-sidebar .search-form {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 30px;
+    background-color: #2a4954;
+    text-align: center;
+    overflow: auto; }
+    .search-sidebar .search-form form {
+      padding: 20px; }
+      .search-sidebar .search-form form label {
+        color: white;
+        text-align: left; }
+      .search-sidebar .search-form form .input-group, .search-sidebar .search-form form #minmag {
+        width: 100%;
+        margin: 10px 0; }
+      .search-sidebar .search-form form #error {
+        animation: glow 400ms linear infinite; }
+@keyframes glow {
+  0% {
+    color: red; }
+  100% {
+    color: white; } }
+      .search-sidebar .search-form form button {
+        width: 100%;
+        background-color: green;
+        color: white;
+        border: 0px;
+        padding: 10px 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        margin: 10px 0; }
+        .search-sidebar .search-form form button:hover {
+          background-color: rgba(0, 255, 0, 0.8); }
+  .search-sidebar .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7); }
+    .search-sidebar .footer p {
+      line-height: 30px;
+      text-align: center;
+      color: white; }
+      .search-sidebar .footer p img {
+        width: 25px; }
+    .search-sidebar .footer:hover {
+      background-color: rgba(0, 0, 0, 0.4); }
+
+.main-wrap {
+  position: absolute;
+  right: 0;
+  left: 400px;
+  background-color: #dddddd;
+  bottom: 0;
+  top: 0;
+  overflow: scroll; }
+  .main-wrap .loader {
+    border: 7px solid #f3f3f3;
+    /* Light grey */
+    border-top: 7px solid yellow;
+    border-right: 7px solid green;
+    border-bottom: 7px solid red;
+    border-left: 7px solid orange;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .main-wrap .frame-wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto; }
+    .main-wrap .frame-wrap #search-bar {
+      width: 100%;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-around; }
+      .main-wrap .frame-wrap #search-bar #place-search-query {
+        width: 60%;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: transparent;
+        margin-bottom: 10px;
+        color: green; }
+      .main-wrap .frame-wrap #search-bar #place-search-button {
+        width: 35%;
+        padding: 10px;
+        background-color: #2a4954;
+        color: white;
+        font-size: 20px;
+        border: transparent;
+        border-radius: 10px; }
+        .main-wrap .frame-wrap #search-bar #place-search-button:hover {
+          background-color: #3b6776; }
+    .main-wrap .frame-wrap .tag {
+      color: green;
+      font-weight: bolder;
+      font-size: 20px;
+      margin-left: 10px; }
+    .main-wrap .frame-wrap #navigator {
+      display: flex;
+      margin: 10px auto; }
+      .main-wrap .frame-wrap #navigator button {
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border-radius: 7px;
+        border: transparent;
+        margin-left: 15px; }
+    .main-wrap .frame-wrap .frame {
+      width: 100%;
+      margin-top: 10px; }
+      .main-wrap .frame-wrap .frame .quakebox {
+        margin: 30px 0px;
+        width: 100%;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        overflow: hidden; }
+        .main-wrap .frame-wrap .frame .quakebox .magnitude {
+          width: 140px;
+          text-align: center;
+          line-height: 179px;
+          color: white;
+          font-size: 60px; }
+        .main-wrap .frame-wrap .frame .quakebox .details {
+          flex-grow: 1;
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+          display: block;
+          text-decoration: none;
+          color: black;
+          -webkit-transition: all 300ms;
+          -moz-transition: all 300ms;
+          transition: all 300ms; }
+          .main-wrap .frame-wrap .frame .quakebox .details:hover {
+            background-color: #cccccc; }
+          .main-wrap .frame-wrap .frame .quakebox .details h2, .main-wrap .frame-wrap .frame .quakebox .details h5 {
+            margin-top: 5px; }
+          .main-wrap .frame-wrap .frame .quakebox .details h5 {
+            color: #565656; }
+          .main-wrap .frame-wrap .frame .quakebox .details .tsunami {
+            border-radius: 3px;
+            padding: 4px;
+            display: inline-block;
+            margin-top: 10px;
+            text-align: center;
+            color: white; }
+        .main-wrap .frame-wrap .frame .quakebox .map-btn {
+          width: 40px;
+          background-color: teal;
+          -webkit-transition: all 300ms;
+          -moz-transition: all 300ms;
+          transition: all 300ms;
+          background-image: url(../images/map-icon.png);
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat; }
+          .main-wrap .frame-wrap .frame .quakebox .map-btn:hover {
+            background-color: #00b3b3; }
+
+@media screen and (max-width: 850px) {
+  .search-sidebar {
+    position: relative;
+    height: 700px;
+    width: 100%; }
+
+  .main-wrap {
+    position: relative;
+    width: 100%;
+    left: 0; } }
+
+/*# sourceMappingURL=app.css.map */
