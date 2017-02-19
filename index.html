@@ -67,7 +67,7 @@
   </div>
   <div class="frame-wrap">
     <form id="search-bar">
-      <input type="text" id="place-search-query" placeholder="type name of a place to search"/>
+      <input type="text" id="place-search-query" placeholder="type name of a place to search" onkeypress="if (event.keyCode == 13) {return false;}"/>
       <button type="button" id="place-search-button">Search</button>
     </form>
     <span class="tag"></span>
